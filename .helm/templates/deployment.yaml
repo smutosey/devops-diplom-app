@@ -13,4 +13,4 @@ spec:
     spec:
       containers:
       - name: nginx-hugo
-        image: {{ .Values.werf.image.netology-demo }}
+        image: {{ .Values.werf.image.demo }}

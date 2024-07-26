@@ -25,4 +25,4 @@ jobs:
           WERF_PASSWORD: ${{ secrets.YCR_KEY }}
           WERF_USERNAME: ${{ secrets.YCR_USER }}
           WERF_ENV: prod
-          WERF_USE_CUSTOM_TAG: "${{ github.ref_name }}"
+          WERF_ADD_CUSTOM_TAG_1: "${{ github.ref_name }}"

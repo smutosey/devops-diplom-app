@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smutosey-demo
+spec:
+  selector:
+    matchLabels:
+      app: smutosey-demo
+  template:
+    metadata:
+      labels:
+        app: smutosey-demo
+    spec:
+      containers:
+      - name: nginx-hugo
+        image: {{ .Values.werf.image.app }}

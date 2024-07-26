@@ -1,6 +1,6 @@
 configVersion: 1
-project: netology-demo
+project: netology
 ---
-image: smutosey/netology-demo
+image: netology-demo
 dockerfile: Dockerfile
 context: ./smutosey.ru

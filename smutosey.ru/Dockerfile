@@ -9,7 +9,7 @@ RUN wget --quiet "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VER
     mv hugo /usr/bin && \
     chmod 755 /usr/bin/hugo
 WORKDIR /src
-COPY ./smutosey.ru /src
+COPY . /src
 # Build the Hugo site
 RUN hugo --environment production
 

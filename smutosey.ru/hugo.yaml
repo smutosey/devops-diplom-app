@@ -22,34 +22,35 @@ languages:
     languageName: "English"
     weight: 1
     taxonomies:
+      archive: archives
       category: categories
       tag: tags
-      series: series
     menu:
       main:
         - name: Archive
           url: archives
           weight: 5
-        - name: Search
-          url: search/
-          weight: 10
         - name: Tags
-          url: tags/
+          url: tags
           weight: 10
-        - name: WiKi
+        - name: Categories
+          url: categories
+          weight: 10
+        - name: Wiki
           url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
   ru:
-    languageName: ":ru:"
+    languageName: "Russian"
     weight: 2
 #     title: PaperModL2
     taxonomies:
-      category: Категории
-      tag: Теги
+      archive: archives
+      category: categories
+      tag: tags
     menu:
       main:
         - name: Архив
-          url: archives/
+          url: archives
           weight: 5
         - name: Теги
           url: tags
@@ -57,8 +58,8 @@ languages:
         - name: Категории
           url: categories
           weight: 10
-        - name: NullLink
-          url: "#"
+        - name: Вики
+          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
@@ -70,7 +71,7 @@ languages:
         imageTitle: ProfileMode image
         # imageWidth: 120
         # imageHeight: 120
-        subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+        subtitle: "☄️ Fast | 📱 Responsive | 💡 Intuitive | 🚀 Dynamic "
         buttons:
           - name: Blog
             url: posts
@@ -107,11 +108,12 @@ params:
 
   profileMode:
     enabled: false
-    title: PaperMod
-    imageUrl: "#"
-    imageTitle: my image
+    title: Nedorezov Alexander
+    imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+    imageTitle: ProfileMode image
     # imageWidth: 120
     # imageHeight: 120
+    subtitle: "☄️ Fast | 📱 Responsive | 💡 Intuitive | 🚀 Dynamic "
     buttons:
       - name: Archives
         url: archives
@@ -119,9 +121,9 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "Nedorezov Alexander's demo page"
+    Title: "👋 Hi there, Netology!"
     Content: >
-      👋 Hi, Netology!
+      Welcome to Nedorezov Alexander's demo blog
 
   socialIcons:
     - name: github
@@ -135,37 +137,37 @@ params:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
-  # label:
-  # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
-  # text: "Home"
-  # icon: icon.png
-  # iconHeight: 35
+  label:
+  iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
+  text: "Home"
+  icon: icon.png
+  iconHeight: 35
 
-  # analytics:
-  #     google:
-  #         SiteVerificationTag: "XYZabc"
+  analytics:
+      google:
+          SiteVerificationTag: "XYZabc"
 
   assets:
     disableHLJS: true
-  #     favicon: "<link / abs url>"
-  #     favicon16x16: "<link / abs url>"
-  #     favicon32x32: "<link / abs url>"
-  #     apple_touch_icon: "<link / abs url>"
-  #     safari_pinned_tab: "<link / abs url>"
+    favicon: "favicon.ico"
+    favicon16x16: "favicon-16x16.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "favicon-touch-icon.png"
+    safari_pinned_tab: "favicon-touch-icon.png"
 
-  # cover:
-  #     hidden: true # hide everywhere but not in structured data
-  #     hiddenInList: true # hide on list pages and home
-  #     hiddenInSingle: true # hide on single page
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
 
-  # fuseOpts:
-  #     isCaseSensitive: false
-  #     shouldSort: true
-  #     location: 0
-  #     distance: 1000
-  #     threshold: 0.4
-  #     minMatchCharLength: 0
-  #     keys: ["title", "permalink", "summary", "content"]
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
 
 markup:
   goldmark:
@@ -173,29 +175,11 @@ markup:
       unsafe: true
   highlight:
     noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
-
-# privacy:
-#   vimeo:
-#     disabled: false
-#     simple: true
-
-#   twitter:
-#     disabled: false
-#     enableDNT: true
-#     simple: true
-
-#   instagram:
-#     disabled: false
-#     simple: true
-
-#   youtube:
-#     disabled: false
-#     privacyEnhanced: true
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
 
 services:
   instagram:

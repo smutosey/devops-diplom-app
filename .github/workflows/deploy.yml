@@ -1,4 +1,5 @@
 name: Netology App Deploy
+run-name: Deploy "${{ github.ref_name }}" 🚀
 on:
   push:
     tags:
@@ -7,7 +8,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
+      - name: Checkout repository code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -15,7 +16,8 @@ jobs:
       - name: Werf init
         uses: werf/actions/install@v2
 
-      - run: |
+      - name: Werf deploy
+        run: |
           source "$(werf ci-env github --as-file)"
           werf cr
           werf converge
